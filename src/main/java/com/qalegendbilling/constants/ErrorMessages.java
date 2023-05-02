@@ -11,5 +11,6 @@ public class ErrorMessages {
 	public static final String INVALID_LOGIN_FAILURE_MESSAGES="Error: Invalid Login Found";
 	public static final String EDIT_USER_TITLE_FAILURE_MESSAGES="Error: Invalid Login Found";
 	public static final String ROLES_TITLE_FAILURE_MESSAGES="Error: Invalid Title Found";
+	public static final String ADD_ROLES_TITLE_FAILURE_MESSAGES="Error: Invalid Title Found";
 	
 }
