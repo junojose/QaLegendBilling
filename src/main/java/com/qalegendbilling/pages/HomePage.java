@@ -26,6 +26,12 @@ public class HomePage extends TestHelperUtility{
 	private final String _usersTab="/html/body/div[2]/aside/section/ul/li[2]/ul/li[1]/a";  
 	@FindBy(xpath=_usersTab)
 	private WebElement usersTab;
+	private final String _rolesSubTabOption="//span[@class='pull-right-container']";  
+	@FindBy(xpath=_rolesSubTabOption)
+	private WebElement rolesSubTabOption;
+	private final String _rolesTab="/html/body/div[2]/aside/section/ul/li[2]/ul/li[2]/a";  
+	@FindBy(xpath=_rolesTab)
+	private WebElement rolesTab;
 	
 	public String homePageTitle() {
 		String title = page.getPageTitle(driver);
@@ -44,10 +50,18 @@ public class HomePage extends TestHelperUtility{
 	{
 		page.clickOnElement(userSubTabOption);
 	}
+	public void clickOnRolesSubTabs()
+	{
+		page.clickOnElement(rolesSubTabOption);
+	}
 	public UserPage clickOnUserTabs()
 	{
 		page.clickOnElement(usersTab);
 		return new UserPage(driver);
+	}
+	public RolePage clickOnRoleTabs() {
+		page.clickOnElement(rolesTab);
+		return new RolePage(driver);
 	}
 	
 	public void clickOnProfileButton() {

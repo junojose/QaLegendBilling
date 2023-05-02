@@ -81,6 +81,10 @@ public class LoginPage extends TestHelperUtility {
 		String errMessage=page.getElementText(errorMessage);
 		return errMessage;
 	}
+	public void enterNewUserName(String uname)
+	{
+		page.enterText(usernameField, uname);
+	}
 	
 	}
 	

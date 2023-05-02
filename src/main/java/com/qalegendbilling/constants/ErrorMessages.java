@@ -7,4 +7,9 @@ public class ErrorMessages {
 	public static final String RESET_EMAIL_MESSAGE="Error:Invalid Email found";
 	public static final String HOME_TITLE_FAILURE_MESSAGES="Error: Invalid Title Found";
 	public static final String USER_TITLE_FAILURE_MESSAGES="Error: Invalid Title Found";
+	public static final String ADD_USER_TITLE_FAILURE_MESSAGES="Error: Invalid Title Found";
+	public static final String INVALID_LOGIN_FAILURE_MESSAGES="Error: Invalid Login Found";
+	public static final String EDIT_USER_TITLE_FAILURE_MESSAGES="Error: Invalid Login Found";
+	public static final String ROLES_TITLE_FAILURE_MESSAGES="Error: Invalid Title Found";
+	
 }

@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qalegendbilling.testscript.UserTest">
+      <class name="com.qalegendbilling.testscript.EditUserTest">
         <methods>
           <include name="setUP"/>
           <include name="tearDown"/>
-          <include name="TC011_verifyUserSearchWithValidData"/>
+          <include name="TC018_verifyUserEditDetails"/>
           <include name="setExtent"/>
         </methods>
-      </class> <!-- com.qalegendbilling.testscript.UserTest -->
+      </class> <!-- com.qalegendbilling.testscript.EditUserTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

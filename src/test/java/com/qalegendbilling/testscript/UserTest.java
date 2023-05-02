@@ -41,7 +41,7 @@ public class UserTest extends Base{
 	}
 
 	@Test(priority=1, enabled=true,description="TC011 verify user search with valid data")
-	public void TC011_verifyUserSearchWithValidData()
+	public void TC011_verifyUserSearchWithValidData() throws InterruptedException
 	{
 		login= new LoginPage(driver);
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
@@ -54,7 +54,7 @@ public class UserTest extends Base{
 	    home.clickOnusersubtabs();
 	    user=new UserPage(driver);
 	    user=home.clickOnUserTabs();
-	    user.clickOnAddUserButton();
+	    add=user.clickOnAddUserButton();
 	    List<ArrayList<String>> dataAdd = ExcelUtility.excelDataReader("AddUser");
 		String firstName = dataAdd.get(1).get(0);
 		String email = dataAdd.get(1).get(1);
@@ -62,10 +62,59 @@ public class UserTest extends Base{
 		String password= dataAdd.get(1).get(3);
 		String Confirmpassword= dataAdd.get(1).get(4);
 		String userName= dataAdd.get(1).get(5);
-	    add.enterAddUserData(firstName,email,roles,password,Confirmpassword,userName);
+	    add.enterFirstName(firstName);
+	    add.enterEmail(email);
+	    add.enterPassword(password);
+	    add.enterConfirmPassword(Confirmpassword);
+	    add.enterUserName(userName);
 	    user=add.clickOnSaveButton();
-	    user.enterSearch(userName);
+	    Thread.sleep(4000);
+	    List<ArrayList<String>> dataUser = ExcelUtility.excelDataReader("AddUser");
+		String usernameEnter = dataUser.get(1).get(1);
+	    user.enterSearch(usernameEnter);
 	    
+	}
+	@Test(priority=1, enabled=true,description="TC011 verify user search with valid data")
+	public void TC012_verifyUserSearchWithInValidData()
+	{
+		login= new LoginPage(driver);
+		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
+		String uname = data.get(1).get(1);
+		String pwd=data.get(1).get(2);
+		login.enterUserName(uname);
+		login.enterPassword(pwd);
+	    home=login.clickOnLoginButton();
+	    login.clickOnEndTourButton();
+	    home.clickOnusersubtabs();
+	    user=new UserPage(driver);
+	    user=home.clickOnUserTabs();
+	    List<ArrayList<String>> dataUser = ExcelUtility.excelDataReader("UserPage");
+		String expectedata = dataUser.get(1).get(3);
+	    user.enterSearch(expectedata);
+	    String actual=user.getErrorMessage();
+	    Assert.assertEquals(expectedata, actual,ErrorMessages.INVALID_LOGIN_FAILURE_MESSAGES);    
+	
+		}
+	@Test(priority=1, enabled=true,description="TC011 verify user search with valid data")
+	public void TC013_verifyErrorMessageDisplayed()
+	{
+		login= new LoginPage(driver);
+		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
+		String uname = data.get(1).get(1);
+		String pwd=data.get(1).get(2);
+		login.enterUserName(uname);
+		login.enterPassword(pwd);
+	    home=login.clickOnLoginButton();
+	    login.clickOnEndTourButton();
+	    home.clickOnusersubtabs();
+	    user=new UserPage(driver);
+	    user=home.clickOnUserTabs();
+	    add=user.clickOnAddUserButton();
+	    add.clickOnSaveButton();
+	    List<ArrayList<String>> dataUser = ExcelUtility.excelDataReader("AddUserError");
+		String expectedata = dataUser.get(1).get(0);
+		add.validationMessage(expectedata);
+		
 	}
 
 }

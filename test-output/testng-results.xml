@@ -1,70 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="8" passed="2" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-26T09:32:46 GST" name="parallel testing of tests" finished-at="2023-04-26T09:33:22 GST" duration-ms="36219">
+  <suite started-at="2023-05-02T10:15:49 GST" name="Default suite" finished-at="2023-05-02T10:16:20 GST" duration-ms="30834">
     <groups>
       <group name="Sanity">
-        <method signature="LoginTest.TC001_verifyLoginPageTitle()[pri:1, instance:com.qalegendbilling.testscript.LoginTest@797b0699]" name="TC001_verifyLoginPageTitle" class="com.qalegendbilling.testscript.LoginTest"/>
-        <method signature="HomeTest.TC006_verifyHomePageTitle()[pri:1, instance:com.qalegendbilling.testscript.HomeTest@6337c201]" name="TC006_verifyHomePageTitle" class="com.qalegendbilling.testscript.HomeTest"/>
+        <method signature="EditUserTest.TC018_verifyUserEditDetails()[pri:1, instance:com.qalegendbilling.testscript.EditUserTest@298a5e20]" name="TC018_verifyUserEditDetails" class="com.qalegendbilling.testscript.EditUserTest"/>
       </group> <!-- Sanity -->
     </groups>
-    <test started-at="2023-04-26T09:32:46 GST" name="chrome-parallel testing-test" finished-at="2023-04-26T09:33:02 GST" duration-ms="15981">
-      <class name="com.qalegendbilling.testscript.LoginTest">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.qalegendbilling.testscript.LoginTest@797b0699]" started-at="2023-04-26T09:32:46 GST" name="setUP" finished-at="2023-04-26T09:33:01 GST" duration-ms="15031" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="TC001_verifyLoginPageTitle()[pri:1, instance:com.qalegendbilling.testscript.LoginTest@797b0699]" started-at="2023-04-26T09:33:01 GST" name="TC001_verifyLoginPageTitle" description="TC001 verify login page title" finished-at="2023-04-26T09:33:02 GST" duration-ms="884" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC001_verifyLoginPageTitle -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testscript.LoginTest@797b0699]" started-at="2023-04-26T09:33:02 GST" name="tearDown" finished-at="2023-04-26T09:33:02 GST" duration-ms="16" status="PASS">
+    <test started-at="2023-05-02T10:15:49 GST" name="Default test" finished-at="2023-05-02T10:16:20 GST" duration-ms="30834">
+      <class name="com.qalegendbilling.testscript.EditUserTest">
+        <test-method is-config="true" signature="setExtent(org.testng.ITestContext)[pri:0, instance:com.qalegendbilling.testscript.EditUserTest@298a5e20]" started-at="2023-05-02T10:15:49 GST" name="setExtent" finished-at="2023-05-02T10:15:49 GST" duration-ms="210" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC001_verifyLoginPageTitle status=SUCCESS method=LoginTest.TC001_verifyLoginPageTitle()[pri:1, instance:com.qalegendbilling.testscript.LoginTest@797b0699] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qalegendbilling.testscript.LoginTest -->
-    </test> <!-- chrome-parallel testing-test -->
-    <test started-at="2023-04-26T09:33:02 GST" name="firefox-parallel testing-test" finished-at="2023-04-26T09:33:22 GST" duration-ms="19870">
-      <class name="com.qalegendbilling.testscript.HomeTest">
-        <test-method is-config="true" signature="setExtent(org.testng.ITestContext)[pri:0, instance:com.qalegendbilling.testscript.HomeTest@6337c201]" started-at="2023-04-26T09:32:46 GST" name="setExtent" finished-at="2023-04-26T09:32:46 GST" duration-ms="22" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@525b1b70]]>
+                <![CDATA[org.testng.TestRunner@1b9d9a2b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtent -->
-        <test-method is-config="true" signature="setUP()[pri:0, instance:com.qalegendbilling.testscript.HomeTest@6337c201]" started-at="2023-04-26T09:33:02 GST" name="setUP" finished-at="2023-04-26T09:33:17 GST" duration-ms="14905" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.qalegendbilling.testscript.EditUserTest@298a5e20]" started-at="2023-05-02T10:15:49 GST" name="setUP" finished-at="2023-05-02T10:16:04 GST" duration-ms="15075" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="TC006_verifyHomePageTitle()[pri:1, instance:com.qalegendbilling.testscript.HomeTest@6337c201]" started-at="2023-04-26T09:33:17 GST" name="TC006_verifyHomePageTitle" description="TC005 verify the home page title" finished-at="2023-04-26T09:33:22 GST" duration-ms="4965" status="PASS">
+        <test-method signature="TC018_verifyUserEditDetails()[pri:1, instance:com.qalegendbilling.testscript.EditUserTest@298a5e20]" started-at="2023-05-02T10:16:04 GST" name="TC018_verifyUserEditDetails" description="TC017 verify the edit user details" finished-at="2023-05-02T10:16:20 GST" duration-ms="15720" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC006_verifyHomePageTitle -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testscript.HomeTest@6337c201]" started-at="2023-04-26T09:33:22 GST" name="tearDown" finished-at="2023-04-26T09:33:22 GST" duration-ms="0" status="PASS">
+        </test-method> <!-- TC018_verifyUserEditDetails -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegendbilling.testscript.EditUserTest@298a5e20]" started-at="2023-05-02T10:16:20 GST" name="tearDown" finished-at="2023-05-02T10:16:20 GST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC006_verifyHomePageTitle status=SUCCESS method=HomeTest.TC006_verifyHomePageTitle()[pri:1, instance:com.qalegendbilling.testscript.HomeTest@6337c201] output={null}]]]>
+                <![CDATA[[TestResult name=TC018_verifyUserEditDetails status=SUCCESS method=EditUserTest.TC018_verifyUserEditDetails()[pri:1, instance:com.qalegendbilling.testscript.EditUserTest@298a5e20] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qalegendbilling.testscript.HomeTest -->
-    </test> <!-- firefox-parallel testing-test -->
-  </suite> <!-- parallel testing of tests -->
+      </class> <!-- com.qalegendbilling.testscript.EditUserTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

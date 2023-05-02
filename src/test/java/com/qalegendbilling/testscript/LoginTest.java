@@ -71,6 +71,30 @@ public class LoginTest extends Base {
 		String actualErrorMessage = reset.getErrorResetMessage();
 		Assert.assertEquals( actualErrorMessage,expectedEmail, ErrorMessages.RESET_EMAIL_MESSAGE);
 	}
+	@Test(priority=1, enabled=true,description="TC014 verify new added user")
+	public void TC0014_verifynewaddedUser()
+	{
+		login= new LoginPage(driver);
+		home=new HomePage(driver);
+		List<ArrayList<String>> data = ExcelUtility.excelDataReader("LoginPage");
+		String uname = data.get(1).get(1);
+		String pwd=data.get(1).get(2);
+		login=new LoginPage(driver);
+		login.enterUserName(uname);
+		login.enterPassword(pwd);
+	    login.clickOnLoginButton();
+	    login.clickOnEndTourButton();
+		home.clickOnProfileButton();
+	    home.clickOnSignOutButton();
+		login=new LoginPage(driver);
+		List<ArrayList<String>> dataNew=ExcelUtility.excelDataReader("LoginPage");
+		String uname1=dataNew.get(1).get(4);
+		String passwd=dataNew.get(1).get(5);
+		login.enterNewUserName(uname);
+		login.enterPassword(passwd);
+		home=login.clickOnLoginButton();
+		login.clickOnEndTourButton();
+	}
 	
 	
 
